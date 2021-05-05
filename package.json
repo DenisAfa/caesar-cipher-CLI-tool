@@ -1,0 +1,20 @@
+{
+  "name": "caesar-cipher-cli-tool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": "./bin/index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DenisAfa/caesar-cipher-CLI-tool.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DenisAfa/caesar-cipher-CLI-tool/issues"
+  },
+  "homepage": "https://github.com/DenisAfa/caesar-cipher-CLI-tool#readme"
+}
