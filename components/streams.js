@@ -11,10 +11,9 @@ const getSource = (input) => {
 };
 
 const getDestination = (output) => {
-  console.log(__dirname);
   const outputFile = path.join(__dirname, `../${output}`);
   const destination = output
-    ? fs.createWriteStream(outputFile)
+    ? fs.createWriteStream(outputFile, { flags: 'a' })
     : process.stdout;
 
   return destination;
