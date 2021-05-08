@@ -49,4 +49,4 @@ const caesarCoder = (text, shift, action = ENCODE) => {
   return output;
 };
 
-module.exports = caesarCoder;
+module.exports = { caesarCoder, ENCODE, DECODE };

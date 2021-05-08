@@ -8,7 +8,7 @@ const transformation = (action, shift, input, output) => {
 
   pipeline(source, transformStream, destination, (err) => {
     if (err) {
-      process.stderr.write(err.message + '\n');
+      process.stderr.write(`${err.message}. \n`);
       process.exit(1);
     }
   });

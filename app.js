@@ -1,5 +1,6 @@
 const program = require('commander');
 const pkg = require('./package.json');
+const { checkValue } = require('./components/checkValue');
 const { transformation } = require('./components/transformation');
 
 program
@@ -13,6 +14,7 @@ program
   .option('-o, --output <filename>', 'an output file')
   .action(() => {
     const { action, shift, input, output } = program.opts();
+    checkValue(action, shift, input, output);
     transformation(action, shift, input, output);
   });
 
