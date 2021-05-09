@@ -23,11 +23,12 @@ const getTransformStream = (action, shift) => {
   const transformStream = new stream.Transform({ objectMode: true });
 
   transformStream._transform = function (chunk, encoding, callback) {
-    const data = `${chunk.toString()} \n`;
+    const data = chunk.toString();
+    const text = `${data} \n`;
     const shiftNumber = Number(shift);
     encoding = 'utf-8';
     try {
-      callback(null, caesarCoder(data, shiftNumber, action));
+      callback(null, caesarCoder(text, shiftNumber, action));
     } catch (err) {
       callback(err);
     }
