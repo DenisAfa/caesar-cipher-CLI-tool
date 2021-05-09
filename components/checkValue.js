@@ -10,7 +10,8 @@ const checkValue = (action, shift, input, output) => {
     process.exit(3);
   }
 
-  if (!typeof (Number(shift) === 'number')) {
+  const shiftNumber = Number(shift);
+  if (typeof shiftNumber !== 'number' || isNaN(shiftNumber)) {
     process.stderr.write('Error! Please, write number for shift parameter. \n');
     process.exit(4);
   }
